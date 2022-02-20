@@ -1,0 +1,96 @@
+{
+  "scopeName": "source.cbb",
+  "patterns": [
+    {
+      "begin": "[\"]",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.cbb" }
+      },
+      "end": "[\"]",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.cbb" }
+      },
+      "name": "string",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "invalid.illegal.unrecognized-string-escape.cbb"
+        }
+      ]
+    },
+    {
+      "match": "#.*",
+      "name": "comment",
+      "patterns": [
+        {
+          "match": "#.*",
+          "name": "comment"
+        }
+      ]
+    },
+    {
+      "match": "(asname|disp_echo|disp_prompt|disp_clear|disp_title|disp_color|math_abs|math_round|math_ceil|math_floor|math_pow|math_mod|math_sqrt|math_rand|math_sin|math_cos|math_tan|math_log|col_add|col_remove|col_remove_at|col_loc_of|str_substr|str_size|str_has|str_split|str_to_col|str_to_upper|str_to_lower|str_trim|to_num|to_bool|exit)(<-)?(\\()",
+      "name": "support.function.misc.cbb"
+    },
+    {
+      "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(<-)?(\\()",
+      "captures": {
+        "1": {
+          "name": "entity.name.function.cbb"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#type-args"
+            }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "punctuation.comma.cbb",
+      "match": ","
+    },
+    {
+      "name": "punctuation.terminator.cbb",
+      "match": ";"
+    },
+    {
+      "name": "punctuation.dot.cbb",
+      "match": "\\."
+    },
+    {
+      "name": "keyword.operator.assignment.cbb",
+      "match": "\\s+:"
+    },
+    {
+      "name": "constant.language.cbb",
+      "match": "(?<!\\$)\\b(true|false|null)\\b(?!\\$)"
+    },
+    {
+      "name": "constant.numeric.cbb",
+      "match": "(?<!\\$)\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b(?!\\$)"
+    },
+    {
+      "name": "keyword.control.cbb",
+      "match": "(?<!\\$)\\b(if|loop|else|dispose|repeat|return)\\b(?!\\$)"
+    },
+    {
+      "name": "keyword.operator.comparison.cbb",
+      "match": "(=|!=|<=?|>=?)"
+    },
+    {
+      "name": "keyword.operator.assignment.arithmetic.cbb",
+      "match": "(([+*/%-]|\\~)=)"
+    },
+    {
+      "name": "keyword.operator.increment-decrement.cbb",
+      "match": "(\\-\\-|\\+\\+)"
+    },
+    {
+      "name": "keyword.operator.arithmetic.cbb",
+      "match": "(\\-|\\+|\\*|\\/|\\~\\/|%)"
+    }
+  ]
+}

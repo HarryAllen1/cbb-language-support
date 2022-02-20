@@ -1,0 +1,12 @@
+{
+  "Hello World": {
+    "prefix": "helloworld",
+    "description": "A simple hello world example",
+    "body": ["disp_echo(\"Hello, World!\");", "$0"]
+  },
+  "Print": {
+    "prefix": "print",
+    "description": "Prints a line to the console",
+    "body": ["disp_echo(\"$1\");", "$2"]
+  }
+}
