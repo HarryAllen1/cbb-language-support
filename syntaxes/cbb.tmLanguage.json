@@ -29,7 +29,7 @@
       ]
     },
     {
-      "match": "(asname|disp_echo|disp_prompt|disp_clear|disp_title|disp_color|math_abs|math_round|math_ceil|math_floor|math_pow|math_mod|math_sqrt|math_rand|math_sin|math_cos|math_tan|math_log|col_add|col_remove|col_remove_at|col_loc_of|str_substr|str_size|str_has|str_split|str_to_col|str_to_upper|str_to_lower|str_trim|to_num|to_bool|exit)(<-)?(\\()",
+      "match": "(disp_echo|disp_prompt|disp_clear|disp_title|disp_color|math_abs|math_round|math_ceil|math_floor|math_pow|math_mod|math_sqrt|math_rand|math_sin|math_cos|math_tan|math_log|col_add|col_remove|col_remove_at|col_loc_of|str_substr|str_size|str_has|str_split|str_to_col|str_to_upper|str_to_lower|str_trim|to_num|to_bool|exit)(<-)?(\\()",
       "name": "support.function.misc.cbb"
     },
     {
@@ -74,7 +74,7 @@
     },
     {
       "name": "keyword.control.cbb",
-      "match": "(?<!\\$)\\b(if|loop|else|dispose|repeat|return)\\b(?!\\$)"
+      "match": "(?<!\\$)\\b(asname|if|loop|else|dispose|repeat|return|run|global|local)\\b(?!\\$)"
     },
     {
       "name": "keyword.operator.comparison.cbb",
@@ -85,12 +85,8 @@
       "match": "(([+*/%-]|\\~)=)"
     },
     {
-      "name": "keyword.operator.increment-decrement.cbb",
-      "match": "(\\-\\-|\\+\\+)"
-    },
-    {
       "name": "keyword.operator.arithmetic.cbb",
-      "match": "(\\-|\\+|\\*|\\/|\\~\\/|%)"
+      "match": "(\\-|\\+|\\*|\\/)"
     }
   ]
 }
