@@ -2,6 +2,10 @@
   "scopeName": "source.cbb",
   "patterns": [
     {
+      "name": "constant.character.escape.cbb",
+      "match": "\\^[t|n|\\^]"
+    },
+    {
       "begin": "[\"]",
       "beginCaptures": {
         "0": { "name": "punctuation.definition.string.begin.cbb" }
@@ -13,11 +17,12 @@
       "name": "string",
       "patterns": [
         {
-          "match": "\\\\.",
+          "match": "\\^.",
           "name": "invalid.illegal.unrecognized-string-escape.cbb"
         }
       ]
     },
+
     {
       "match": "#.*",
       "name": "comment",
@@ -33,7 +38,7 @@
       "name": "support.function.misc.cbb"
     },
     {
-      "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(<-)?(\\()",
+      "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(<-)?(?=\\()",
       "captures": {
         "1": {
           "name": "entity.name.function.cbb"
