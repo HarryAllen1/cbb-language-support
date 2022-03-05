@@ -2,11 +2,11 @@
   "scopeName": "source.cbb",
   "patterns": [
     {
-      "begin": "[\"]",
+      "begin": "[\"|']",
       "beginCaptures": {
         "0": { "name": "punctuation.definition.string.begin.cbb" }
       },
-      "end": "[\"]",
+      "end": "[\"|']",
       "endCaptures": {
         "0": { "name": "punctuation.definition.string.end.cbb" }
       },
