@@ -6,7 +6,7 @@
     "name": "Harry Allen"
   },
   "publisher": "HarryAllen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icon": "cbb_logo.png",
   "engines": {
     "vscode": "^1.64.0"
